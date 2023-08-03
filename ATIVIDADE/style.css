@@ -1,0 +1,19 @@
+ul,a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    color: black;
+
+
+}
+A:hover{
+    color: rgba(223, 21, 14, 0.849);
+}
