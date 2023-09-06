@@ -17,3 +17,29 @@ a{
 A:hover{
     color: rgba(223, 21, 14, 0.849);
 }
+.fleximg{
+    display: flex;
+    padding: 5px;
+   
+    
+}
+img{
+    width: 25%;
+    margin-right: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+@font-face {
+    font-family: "minha fonte";
+    src: url(Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf);
+}
+h1{
+    font-family: var(--fonte-pricipal);
+}
+h2{
+    font-family: var(--fonte-pricipal);
+}
+:root{
+    --fonte-pricipal: 'minha fonte';
+}
