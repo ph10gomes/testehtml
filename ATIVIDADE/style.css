@@ -11,6 +11,7 @@ a{
     font-weight: 600;
     padding: 10px;
     color: black;
+    font-family: var(--fonte-secundaria);
 
 
 }
@@ -38,8 +39,21 @@ h1{
     font-family: var(--fonte-pricipal);
 }
 h2{
-    font-family: var(--fonte-pricipal);
+    font-family: var(--fonte-secundaria);
 }
 :root{
     --fonte-pricipal: 'minha fonte';
+}
+@import url('https://fonts.google.com/specimen/Permanent+Marker');
+
+@font-face{
+    font-family: "minha fonte 2";
+    src: url(Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+:root{
+    --fonte-secundaria:"minha fonte 2"
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    
 }
