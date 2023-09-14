@@ -27,15 +27,18 @@ p:first-child{
 }
 
 /* Menu */ 
-ul{
-    display: none;
+.menu{
+    display: block;
     position: fixed;
     z-index: 1;
     top: 0;
     bottom: 0;
+    left: -300px;
+    list-style: none;
     background-color:gray;
-    color: aliceblue;
+    color: black;
     padding: 20px 30px;
+    transition: left 1.0s, background-color 1.5s;
 }
 label[for="icone"]{
     position: fixed;
@@ -51,8 +54,11 @@ input[type="checkbox"]{
     display: none;
 }
 
-input[type="checkbox"]:checked + ul{
-    display: block;
+input[type="checkbox"]:checked + .menu{
+    left: 0;
+    background-color:azure;
+    color: black;
+    transition: left 1.0s,background-color 3s, color 3s;
 }
 li:hover{
     text-decoration:underline ;
@@ -61,3 +67,49 @@ li:hover{
 h1{
     text-align: center;
 }
+/*Alguns de pseudo-elementos e pseudo-classes */
+p::first-line {
+    color: blue;
+    text-transform: uppercase;
+  }
+  button:hover {
+    color: blue;
+  }
+ 
+  input[type="color"]::-moz-color-swatch {
+    border-radius: 10px;
+    border-style: none;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+  }
+  
+  dialog::backdrop {
+    background-color: salmon;
+  }
+  
+  li::marker {
+    content: '✔';
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+  }
+  input {
+    margin-top: 1rem;
+  }
+  
+  input::file-selector-button {
+    font-weight: bold;
+    color: dodgerblue;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+  }
+  .lista{
+    content: '✝ ';
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+  }
+  
