@@ -45,6 +45,17 @@ btMudarConteudo.addEventListener('click', () => {
 let btMudarConteudo = document.getElementById('bt01');
 let btMudarCSS = document.getElementById('bt02');
 let btGerarConteudo = document.getElementById('bt03');
+let btMudarAtributo = document.getElementById('bt04');
+let links = document.querySelectorAll('a')
+
+const images = [
+    'cruzeiro1.webp',
+    'cruzeiro2.webp',
+    'cruzeiro3.webp'
+
+];
+
+let index = 0;
 
 btMudarConteudo.addEventListener('click', function() {
     let titulo = document.getElementById('h01');
@@ -53,6 +64,7 @@ btMudarConteudo.addEventListener('click', function() {
     titulo.style.textDecoration = 'underline';
     titulo.style.fontFamily= 'Arial';
     titulo.style.fontStyle = 'italic';
+    titulo.style.border = '1px solid';
     //alert('Testar mudar o conteudo');
 });
 
@@ -64,8 +76,34 @@ btMudarCSS.addEventListener('click', function() {
 });
 
 btGerarConteudo.addEventListener('click', function() {
-    alert('Testar Gerar conteudo');
+    let tabela =document.querySelector('table');
+    let linha =document.createElement('tr');
+    let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+    td1.innerText = '98745654';
+    td2.innerText =  'Cuzeiro so me faz raiva';
+    linha.append(td1);
+    linha.append(td2);
+    tabela.append(linha);
+
+
 });
+btMudarAtributo.addEventListener('click', function() {
+      let imagem  = document.querySelector('img');
+      index = index + 1;
+      console.log (images);
+      if (index >= images.length){
+         index = 0;
+      }
 
+      imagem.setAttribute('src','./images/'+ images[index]);
+    
 
-//console.log(btMudarConteudo);
+});
+for(let i = 0; i < links.length; i++){
+    links[i].addEventListener('click', (event) => {
+        event.preventDefault();
+        alert('Clicou em: ' + event.target.innerText);
+    });
+}
+
